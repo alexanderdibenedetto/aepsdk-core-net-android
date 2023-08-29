@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B2757C57-FE61-4DBB-8462-847870CA69C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2EE75B11-611E-4391-B50E-F02AA1EB95A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AepCore", "src\AepCore\AepCore.csproj", "{03A70E1A-76F1-4DE9-93E7-4CFD5C7B9292}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AepIdentity", "src\AepIdentity\AepIdentity.csproj", "{BBB670AF-7856-47AD-A131-109FDE2E6B27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AepLifecycle", "src\AepLifecycle\AepLifecycle.csproj", "{378C1B66-7129-49BE-A2D0-896F461A9CD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AepSignal", "src\AepSignal\AepSignal.csproj", "{9E5B678D-392D-4286-BE98-B689B2328F96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adobe.AepSdk.Core.Net.Android", "src\Adobe.AepSdk.Core.Net.Android\Adobe.AepSdk.Core.Net.Android.csproj", "{E3F49993-3805-4966-BF92-41A5EE8B5927}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test\test.csproj", "{8AC1466C-54A7-4236-AF93-90A48AFC6130}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03A70E1A-76F1-4DE9-93E7-4CFD5C7B9292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03A70E1A-76F1-4DE9-93E7-4CFD5C7B9292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03A70E1A-76F1-4DE9-93E7-4CFD5C7B9292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03A70E1A-76F1-4DE9-93E7-4CFD5C7B9292}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB670AF-7856-47AD-A131-109FDE2E6B27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB670AF-7856-47AD-A131-109FDE2E6B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB670AF-7856-47AD-A131-109FDE2E6B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB670AF-7856-47AD-A131-109FDE2E6B27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{378C1B66-7129-49BE-A2D0-896F461A9CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{378C1B66-7129-49BE-A2D0-896F461A9CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{378C1B66-7129-49BE-A2D0-896F461A9CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{378C1B66-7129-49BE-A2D0-896F461A9CD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E5B678D-392D-4286-BE98-B689B2328F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5B678D-392D-4286-BE98-B689B2328F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5B678D-392D-4286-BE98-B689B2328F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5B678D-392D-4286-BE98-B689B2328F96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F49993-3805-4966-BF92-41A5EE8B5927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F49993-3805-4966-BF92-41A5EE8B5927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F49993-3805-4966-BF92-41A5EE8B5927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F49993-3805-4966-BF92-41A5EE8B5927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AC1466C-54A7-4236-AF93-90A48AFC6130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC1466C-54A7-4236-AF93-90A48AFC6130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AC1466C-54A7-4236-AF93-90A48AFC6130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC1466C-54A7-4236-AF93-90A48AFC6130}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B598230-B235-4F32-B176-1FF49D1E2C2C}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{03A70E1A-76F1-4DE9-93E7-4CFD5C7B9292} = {B2757C57-FE61-4DBB-8462-847870CA69C8}
+		{BBB670AF-7856-47AD-A131-109FDE2E6B27} = {B2757C57-FE61-4DBB-8462-847870CA69C8}
+		{378C1B66-7129-49BE-A2D0-896F461A9CD2} = {B2757C57-FE61-4DBB-8462-847870CA69C8}
+		{9E5B678D-392D-4286-BE98-B689B2328F96} = {B2757C57-FE61-4DBB-8462-847870CA69C8}
+		{E3F49993-3805-4966-BF92-41A5EE8B5927} = {B2757C57-FE61-4DBB-8462-847870CA69C8}
+		{8AC1466C-54A7-4236-AF93-90A48AFC6130} = {2EE75B11-611E-4391-B50E-F02AA1EB95A6}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		version = 0.0.1
+	EndGlobalSection
+EndGlobal

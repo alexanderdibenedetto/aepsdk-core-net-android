@@ -1,0 +1,4 @@
+﻿<metadata>
+    <remove-node path="/api/package[@name='com.adobe.marketing.mobile.identity']/class[@name='BuildConfig']" />
+    <remove-node path="/api/package[@name='com.adobe.marketing.mobile.identity']/class[@name='IdentityExtension']" />
+</metadata>
