@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AepLifecycle", "src\AepLife
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AepSignal", "src\AepSignal\AepSignal.csproj", "{9E5B678D-392D-4286-BE98-B689B2328F96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adobe.AepSdk.Core.Net.Android", "src\Adobe.AepSdk.Core.Net.Android\Adobe.AepSdk.Core.Net.Android.csproj", "{E3F49993-3805-4966-BF92-41A5EE8B5927}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{9E5B678D-392D-4286-BE98-B689B2328F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E5B678D-392D-4286-BE98-B689B2328F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E5B678D-392D-4286-BE98-B689B2328F96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F49993-3805-4966-BF92-41A5EE8B5927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F49993-3805-4966-BF92-41A5EE8B5927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F49993-3805-4966-BF92-41A5EE8B5927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F49993-3805-4966-BF92-41A5EE8B5927}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,5 +55,9 @@ Global
 		{BBB670AF-7856-47AD-A131-109FDE2E6B27} = {B2757C57-FE61-4DBB-8462-847870CA69C8}
 		{378C1B66-7129-49BE-A2D0-896F461A9CD2} = {B2757C57-FE61-4DBB-8462-847870CA69C8}
 		{9E5B678D-392D-4286-BE98-B689B2328F96} = {B2757C57-FE61-4DBB-8462-847870CA69C8}
+		{E3F49993-3805-4966-BF92-41A5EE8B5927} = {B2757C57-FE61-4DBB-8462-847870CA69C8}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		version = 0.0.1
 	EndGlobalSection
 EndGlobal

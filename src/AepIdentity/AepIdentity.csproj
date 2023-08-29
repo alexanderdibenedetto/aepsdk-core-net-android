@@ -4,6 +4,16 @@
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Adobe.AepSdk.Core.Net.Android.AepIdentity</AssemblyName>
+    <AssemblyTitle>Adobe.AepSdk.Core.Net.Android.AepIdentity</AssemblyTitle>
+    <Description>.NET MAUI Bindings for Adobe.AepSdk.Core.Android.AepIdentity</Description>
+    <Authors>Alexander DiBenedetto</Authors>
+    <PackageTags>Adobe MAUI AEP</PackageTags>
+    <ReleaseVersion>0.0.1</ReleaseVersion>
+    <AssemblyVersion>$(ReleaseVersion)</AssemblyVersion>
+    <PackageVersion>$(ReleaseVersion)</PackageVersion>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/alexanderdibenedetto/aepsdk-core-net-android</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\AepCore\AepCore.csproj" />

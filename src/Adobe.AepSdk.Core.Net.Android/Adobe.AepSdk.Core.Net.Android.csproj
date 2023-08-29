@@ -3,19 +3,24 @@
     <TargetFramework>net7.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyName>Adobe.AepSdk.Core.Net.Android.AepSignal</AssemblyName>
-    <AssemblyTitle>Adobe.AepSdk.Core.Net.Android.AepSignal</AssemblyTitle>
-    <Description>.NET MAUI Bindings for Adobe.AepSdk.Core.Android.AepSignal</Description>
+    <ImplicitUsings>enable</ImplicitUsings>    
+    <AssemblyName>Adobe.AepSdk.Core.Net.Android</AssemblyName>
+    <AssemblyTitle>Adobe.AepSdk.Core.Net.Android</AssemblyTitle>
+    <Description>.NET MAUI Bindings for Adobe.AepSdk.Core.Android</Description>
     <Authors>Alexander DiBenedetto</Authors>
     <PackageTags>Adobe MAUI AEP</PackageTags>
     <ReleaseVersion>0.0.1</ReleaseVersion>
     <AssemblyVersion>$(ReleaseVersion)</AssemblyVersion>
     <PackageVersion>$(ReleaseVersion)</PackageVersion>
+    <OutputType>Library</OutputType>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/alexanderdibenedetto/aepsdk-core-net-android</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\AepCore\AepCore.csproj" />
+    <ProjectReference Include="..\AepIdentity\AepIdentity.csproj" />
+    <ProjectReference Include="..\AepLifecycle\AepLifecycle.csproj" />
+    <ProjectReference Include="..\AepSignal\AepSignal.csproj" />
   </ItemGroup>
 </Project>
