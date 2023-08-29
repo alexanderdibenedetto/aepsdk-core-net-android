@@ -2,16 +2,16 @@
 using Android.Content.PM;
 using Android.OS;
 using Com.Adobe.Marketing.Mobile;
+using Java.Interop;
 
 namespace test;
 
 [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
 public class MainActivity : MauiAppCompatActivity
 {
-    public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
+    protected override void OnCreate(Bundle savedInstanceState)
     {
-        base.OnCreate(savedInstanceState, persistentState);
-
+        base.OnCreate(savedInstanceState);
         InitializeAdobeCore();
     }
 
@@ -37,9 +37,9 @@ public class MainActivity : MauiAppCompatActivity
             MobileCore.RegisterExtensions(
                 new List<Java.Lang.Class>
                 {
-                    Java.Lang.Class.FromType(typeof(Com.Adobe.Marketing.Mobile.AepIdentity)),
-                    Java.Lang.Class.FromType(typeof(Com.Adobe.Marketing.Mobile.AepLifecycle)),
-                    Java.Lang.Class.FromType(typeof(Com.Adobe.Marketing.Mobile.AepSignal))
+                    Java.Lang.Class.FromType(typeof(Com.Adobe.Marketing.Mobile.Identity)),
+                    Java.Lang.Class.FromType(typeof(Com.Adobe.Marketing.Mobile.Lifecycle)),
+                    Java.Lang.Class.FromType(typeof(Com.Adobe.Marketing.Mobile.Signal))
                 },
                 new AdobeRegisterExtensionsCallback());
         }
@@ -47,6 +47,62 @@ public class MainActivity : MauiAppCompatActivity
         {
             System.Diagnostics.Debug.WriteLine($"Unable to complete initialization of Adobe.{System.Environment.NewLine}{exception.Message}{exception.StackTrace}");
         }
+    }
+
+
+    public void TrackState(string state, IDictionary<string, string> data)
+    {
+        MobileCore.TrackState(state, data);
+    }
+
+    public void TrackAction(string action, IDictionary<string, string> data)
+    {
+        MobileCore.TrackAction(action, data);
+    }
+
+    public async Task<string> GenerateVisitorUrl(string url)
+    {
+        if (!string.IsNullOrWhiteSpace(url))
+        {
+            GetUrlAdobeCallback callback = new();
+            Identity.AppendVisitorInfoForURL(url, callback);
+            return await callback.Completed() ?? url;
+        }
+        return url;
+    }
+
+    public async Task<string> GetUrlVariables()
+    {
+        GetUrlAdobeCallback callback = new();
+        Identity.GetUrlVariables(callback);
+        return await callback.Completed() ?? callback.UrlWithTracking;
+    }
+
+    private class GetUrlAdobeCallback : Java.Lang.Object, IAdobeCallback
+    {
+        private bool callCalled = false;
+
+        public void Call(Java.Lang.Object urlWithTracking)
+        {
+            callCalled = true;
+
+            if (urlWithTracking != null)
+            {
+                UrlWithTracking = Convert.ToString(urlWithTracking);
+            }
+        }
+
+        internal async Task<string> Completed()
+        {
+            while (!callCalled)
+            {
+                await Task.Delay(100);
+            }
+
+            return UrlWithTracking;
+        }
+
+        public string UrlWithTracking { get; set; }
     }
 
     private class AdobeRegisterExtensionsCallback : Java.Lang.Object, IAdobeCallback
@@ -61,4 +117,3 @@ public class MainActivity : MauiAppCompatActivity
         }
     }
 }
-

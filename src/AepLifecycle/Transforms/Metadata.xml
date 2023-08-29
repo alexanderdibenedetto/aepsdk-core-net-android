@@ -1,3 +1,4 @@
 ﻿<metadata>
-    <attr path="/api/package[@name='com.adobe.marketing.mobile']/class[@name='Lifecycle']" name="name">AepLifecycle</attr>
+    <remove-node path="/api/package[@name='com.adobe.marketing.mobile.lifecycle']/class[@name='BuildConfig']" />
+    <remove-node path="/api/package[@name='com.adobe.marketing.mobile.lifecycle']/class[@name='LifecycleExtension']" />
 </metadata>

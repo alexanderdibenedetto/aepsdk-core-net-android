@@ -1,3 +1,5 @@
 ﻿<metadata>
-    <attr path="/api/package[@name='com.adobe.marketing.mobile']/class[@name='Signal']" name="name">AepSignal</attr>
+    <remove-node path="/api/package[@name='com.adobe.marketing.mobile.signal']/class[@name='BuildConfig']" />
+    <remove-node path="/api/package[@name='com.adobe.marketing.mobile.signal.internal']/class[@name='SignalExtension']" />
+    <remove-node path="/api/package[@name='com.adobe.marketing.mobile.signal.internal']/class[@name='EventExtensionsKt']" />
 </metadata>
