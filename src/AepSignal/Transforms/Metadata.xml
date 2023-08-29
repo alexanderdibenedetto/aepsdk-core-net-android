@@ -1,0 +1,3 @@
+﻿<metadata>
+    <attr path="/api/package[@name='com.adobe.marketing.mobile']/class[@name='Signal']" name="name">AepSignal</attr>
+</metadata>
