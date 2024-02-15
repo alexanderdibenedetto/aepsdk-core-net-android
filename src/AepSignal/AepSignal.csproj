@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0-android</TargetFramework>
+    <TargetFramework>net8.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -9,7 +9,7 @@
     <Description>.NET MAUI Bindings for Adobe.AepSdk.Core.Android.AepSignal</Description>
     <Authors>Alexander DiBenedetto</Authors>
     <PackageTags>Adobe MAUI AEP</PackageTags>
-    <ReleaseVersion>0.0.1</ReleaseVersion>
+    <ReleaseVersion>2.6.2</ReleaseVersion>
     <AssemblyVersion>$(ReleaseVersion)</AssemblyVersion>
     <PackageVersion>$(ReleaseVersion)</PackageVersion>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>

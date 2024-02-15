@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0-android</TargetFramework>
+    <TargetFramework>net8.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>    
@@ -9,7 +9,7 @@
     <Description>.NET MAUI Bindings for Adobe.AepSdk.Core.Android</Description>
     <Authors>Alexander DiBenedetto</Authors>
     <PackageTags>Adobe MAUI AEP</PackageTags>
-    <ReleaseVersion>0.0.1</ReleaseVersion>
+    <ReleaseVersion>2.6.2</ReleaseVersion>
     <AssemblyVersion>$(ReleaseVersion)</AssemblyVersion>
     <PackageVersion>$(ReleaseVersion)</PackageVersion>
     <OutputType>Library</OutputType>
@@ -18,9 +18,9 @@
     <PackageProjectUrl>https://github.com/alexanderdibenedetto/aepsdk-core-net-android</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AepCore\AepCore.csproj" />
-    <ProjectReference Include="..\AepIdentity\AepIdentity.csproj" />
-    <ProjectReference Include="..\AepLifecycle\AepLifecycle.csproj" />
     <ProjectReference Include="..\AepSignal\AepSignal.csproj" />
+    <ProjectReference Include="..\AepLifecycle\AepLifecycle.csproj" />
+    <ProjectReference Include="..\AepIdentity\AepIdentity.csproj" />
+    <ProjectReference Include="..\AepCore\AepCore.csproj" />
   </ItemGroup>
 </Project>
