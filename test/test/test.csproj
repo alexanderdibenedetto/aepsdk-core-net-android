@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-android</TargetFrameworks>
+		<TargetFrameworks>net8.0-android</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>test</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -19,11 +19,11 @@
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
-		<ReleaseVersion>0.0.1</ReleaseVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">23.0</SupportedOSPlatformVersion>
+		<ReleaseVersion>2.6.2</ReleaseVersion>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
 	<ItemGroup>
@@ -45,23 +45,28 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
-		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.2" />
-		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Common.Java8" Version="2.6.1.2" />
-		<PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel.Ktx" Version="2.6.1.2" />
-		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx" Version="2.6.1.2" />
-		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Ktx" Version="2.6.1.2" />
-		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.6.1.2" />
-		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Service" Version="2.6.1.2" />
-		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime.Ktx" Version="2.6.1.2" />
-		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.7.2" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.5" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.6.2.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Common.Java8" Version="2.6.2.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel.Ktx" Version="2.6.2.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Ktx" Version="2.6.2.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx" Version="2.6.2.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Service" Version="2.6.2.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime.Ktx" Version="2.6.2.2" />
+		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.8.0.1" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.7" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.7" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.3.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Collection" Version="1.3.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.3.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\src\Adobe.AepSdk.Core.Net.Android\Adobe.AepSdk.Core.Net.Android.csproj" />
-	  <ProjectReference Include="..\..\src\AepCore\AepCore.csproj" />
-	  <ProjectReference Include="..\..\src\AepIdentity\AepIdentity.csproj" />
-	  <ProjectReference Include="..\..\src\AepLifecycle\AepLifecycle.csproj" />
 	  <ProjectReference Include="..\..\src\AepSignal\AepSignal.csproj" />
+	  <ProjectReference Include="..\..\src\AepLifecycle\AepLifecycle.csproj" />
+	  <ProjectReference Include="..\..\src\AepCore\AepCore.csproj" />
+	  <ProjectReference Include="..\..\src\Adobe.AepSdk.Core.Net.Android\Adobe.AepSdk.Core.Net.Android.csproj" />
+	  <ProjectReference Include="..\..\src\AepIdentity\AepIdentity.csproj" />
 	</ItemGroup>
 </Project>

@@ -49,7 +49,6 @@ public class MainActivity : MauiAppCompatActivity
         }
     }
 
-
     public void TrackState(string state, IDictionary<string, string> data)
     {
         MobileCore.TrackState(state, data);
@@ -66,7 +65,15 @@ public class MainActivity : MauiAppCompatActivity
         {
             GetUrlAdobeCallback callback = new();
             Identity.AppendVisitorInfoForURL(url, callback);
-            return await callback.Completed() ?? url;
+            try
+            {
+                return await callback.UrlResult.Task ?? url;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Unable to generate visitor URL.{System.Environment.NewLine}{ex.Message}{ex.StackTrace}");
+                return url;
+            }
         }
         return url;
     }
@@ -75,34 +82,39 @@ public class MainActivity : MauiAppCompatActivity
     {
         GetUrlAdobeCallback callback = new();
         Identity.GetUrlVariables(callback);
-        return await callback.Completed() ?? callback.UrlWithTracking;
+        return await callback.UrlResult.Task;
     }
 
-    private class GetUrlAdobeCallback : Java.Lang.Object, IAdobeCallback
+    private class GetUrlAdobeCallback : Java.Lang.Object, IAdobeCallbackWithError
     {
-        private bool callCalled = false;
+        public readonly TaskCompletionSource<string> UrlResult;
 
-        public void Call(Java.Lang.Object urlWithTracking)
+        public GetUrlAdobeCallback()
         {
-            callCalled = true;
+            UrlResult = new TaskCompletionSource<string>();
+        }
 
-            if (urlWithTracking != null)
+        public void Call(Java.Lang.Object p0)
+        {
+            if (p0 is Java.Lang.String url)
             {
-                UrlWithTracking = Convert.ToString(urlWithTracking);
+                UrlResult?.TrySetResult(Convert.ToString(url) ?? string.Empty);
+            }
+            else
+            {
+                UrlResult?.TrySetResult(null);
             }
         }
 
-        internal async Task<string> Completed()
+        public void Fail(AdobeError p0)
         {
-            while (!callCalled)
-            {
-                await Task.Delay(100);
-            }
-
-            return UrlWithTracking;
+            UrlResult.TrySetException(new AdobeException() { Error = p0 });
         }
+    }
 
-        public string UrlWithTracking { get; set; }
+    private class AdobeException : Exception
+    {
+        public AdobeError Error { get; set; }
     }
 
     private class AdobeRegisterExtensionsCallback : Java.Lang.Object, IAdobeCallback
