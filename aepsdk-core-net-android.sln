@@ -48,7 +48,6 @@ Global
 		{8AC1466C-54A7-4236-AF93-90A48AFC6130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8AC1466C-54A7-4236-AF93-90A48AFC6130}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AC1466C-54A7-4236-AF93-90A48AFC6130}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AC1466C-54A7-4236-AF93-90A48AFC6130}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +64,6 @@ Global
 		{8AC1466C-54A7-4236-AF93-90A48AFC6130} = {2EE75B11-611E-4391-B50E-F02AA1EB95A6}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		version = 2.6.2
+		version = 3.2.0
 	EndGlobalSection
 EndGlobal
