@@ -9,7 +9,7 @@
     <Description>.NET MAUI Bindings for Adobe.AepSdk.Core.Android.AepIdentity</Description>
     <Authors>Alexander DiBenedetto</Authors>
     <PackageTags>Adobe MAUI AEP</PackageTags>
-    <ReleaseVersion>2.6.2</ReleaseVersion>
+    <ReleaseVersion>3.2.0</ReleaseVersion>
     <AssemblyVersion>$(ReleaseVersion)</AssemblyVersion>
     <PackageVersion>$(ReleaseVersion)</PackageVersion>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
